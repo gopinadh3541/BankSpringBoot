@@ -10,6 +10,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class NewApplication {
 
+	/*
+	 * @Override public String toString() { return "NewApplication [firstName=" +
+	 * firstName + ", lastName=" + lastName + ", mail=" + mail + ", gender=" +
+	 * gender + ", userName=" + userName + ", passWord=" + passWord + "]"; }
+	 */
 	private String firstName;
 	private String lastName;
 	@Id
@@ -20,6 +25,13 @@ public class NewApplication {
 	public String getFirstName() {
 		return firstName;
 	}
+
+	/*
+	 * public NewApplication(String firstName, String lastName, String mail, String
+	 * gender, String userName, String passWord) { super(); this.firstName =
+	 * firstName; this.lastName = lastName; this.mail = mail; this.gender = gender;
+	 * this.userName = userName; this.passWord = passWord; }
+	 */
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}

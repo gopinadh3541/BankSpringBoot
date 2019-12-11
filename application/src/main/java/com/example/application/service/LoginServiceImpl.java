@@ -30,7 +30,7 @@ public class LoginServiceImpl implements LoginService {
 		boolean b=false;
 		List<Login> list=dao.findAll();
 		for (Login login : list) {
-			if(login.getUserName().equals(details.getUserName()))
+			if(login.getUserName().equals(details.getUserName()) || login.getApplication().getMail().equals(details.getUserName()))
 			{
 				if(login.getPassWord().equals(details.getPassWord()))
 				{

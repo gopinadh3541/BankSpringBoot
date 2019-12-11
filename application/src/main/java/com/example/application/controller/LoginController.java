@@ -70,12 +70,15 @@ public class LoginController {
 		
 		login.setUserName(app.getUserName());
 		login.setPassWord(app.getPassWord());
+		login.setApplication(app);
 		boolean b=service.addAccountDetails(app);
 		boolean l=service.addCredentials(login);
 		
 		if(b==true && l==true)
 		{
+			login.setUserName("");;
 			mv.addObject("login", login);
+			
 			mv.setViewName("login");
 		}
 		else

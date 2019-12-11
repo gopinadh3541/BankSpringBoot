@@ -15,15 +15,15 @@
 <td align="left"> Banking</td>
 </tr>
 <tr>
-<td>UserName:</td>
-<td><form:input path="userName"/></td>
+<td>UserName or Email</td>
+<td><form:input path="userName" /></td>
 </tr>
 <tr>
 <td>PassWord</td>
 <td><form:password path="passWord"/></td>
 </tr>
 <tr>
-<td><a href="forgot.jsp">Forgot Password</a></td>
+<td><a href="forgot">Forgot Password</a></td>
 <td><a href="newApplication">Sign Up</a></td>
 </tr>
 <tr>
