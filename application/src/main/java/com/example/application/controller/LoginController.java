@@ -10,10 +10,14 @@ import org.springframework.web.servlet.ModelAndView;
 import com.example.application.bean.Login;
 import com.example.application.bean.NewApplication;
 import com.example.application.service.LoginService;
+import com.example.application.service.MailService;
 
 @Controller
 public class LoginController {
 
+	@Autowired
+	MailService mail;
+	
 	@Autowired
 	LoginService service;
 	@Autowired
@@ -72,6 +76,17 @@ public class LoginController {
 		login.setPassWord(app.getPassWord());
 		login.setApplication(app);
 		boolean b=service.addAccountDetails(app);
+		try
+		{
+			mail.SendNotification(app);
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+		
+		
+		
 		boolean l=service.addCredentials(login);
 		
 		if(b==true && l==true)
